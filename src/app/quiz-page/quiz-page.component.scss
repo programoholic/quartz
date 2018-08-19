@@ -1,0 +1,33 @@
+.quizzer{
+    margin:10px !important;
+}
+.mic-button{
+    float: right;
+    margin-top: -16px !important;
+    margin-right: 150px !important;
+}
+.quizzer{
+    width:60%;
+    left:25%;
+    top:15%;
+}
+.option-row{
+    margin-top:10px !important;
+}
+.option-button{
+    width: 60%;
+    margin-bottom: 5px;
+    display: block;
+    text-align: inherit;
+}
+.circle{
+    height: 100px;
+    width: 100px;
+    border: 7px solid cadetblue;
+    text-align: center;
+    line-height: 5;
+    font-size: 18px;
+    border-radius: 50%;
+    margin-left: 0px;
+
+}

@@ -1,0 +1,78 @@
+<mat-card [class.mat-elevation-z4]="true">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-2"> 
+        <h6>Question no {{currentQuestionNo+1}}</h6>
+        </div>
+        <div class="col-md-4">
+        <!-- <h6 class="circle"> {{count}} </h6> -->
+        <h6 class="circles">
+            Catogary : {{currentQuestion.category}}
+        </h6>
+            </div>
+            <div class="col-md-2">
+                <button mat-button (click)="changeMic()" class="mic-button">
+                    <img [src]="imgurl" capation="mic"/></button>
+            </div>
+        </div>
+
+    </div>
+
+
+</mat-card>
+<section>
+<!-- <mat-card class="quizzer" [class.mat-elevation-z1]="true">
+    <button mat-button (click)="changeMic()" class="mic-button">
+        <img [src]="imgurl" capation="mic"/></button>
+    <div class="container">
+      <div class="row">
+      {{currentQuestion.question}}
+      </div>
+      <mat-divider></mat-divider>
+    <div class="row option-row">
+        <mat-list role="list">
+            <mat-list-item role="listitem" *ngFor="let option of currentQuestion.incorrect_answers">{{option}}
+                <mat-divider></mat-divider>
+            </mat-list-item>
+           
+            </mat-list> -->
+        <!-- <div class="button" *ngFor="let option of currentQuestion.incorrect_answers">
+            <button mat-raised-button class="option-button">{{option}}</button>
+            </div> -->
+     <!-- <p>{{currentQuestion.incorrect_answers}}</p>
+    </div>
+   
+    </div>
+    <button mat-raised-button (click)="moveToNextQuestion()">NEXT</button>  
+  
+  </mat-card> -->
+  <mat-card class="example-card quizzer" [class.mat-elevation-z1]="true">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <!-- <button mat-button (click)="changeMic()" class="mic-button">
+            <img [src]="imgurl" capation="mic"/></button> -->
+        <mat-card-title style="margin-left:-42px">{{currentQuestion.question}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          <div class="container">
+             <div class="row">
+                <div class="col-md-6">
+                        <div class="list">
+                                <button mat-raised-button class="option-button" *ngFor="let option of currentQuestion.incorrect_answers;let i=index" (click)="validateAnswer(i)" id={{i}}>{{option}}</button>
+                              </div>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="col-md-4">
+                        <h6 class="circle"><span>{{countDown | async}}</span></h6>
+                </div>
+             </div>
+          </div>
+         
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="moveToNextQuestion()" class="">NEXT</button>
+      </mat-card-actions>
+    </mat-card>
+</section>
+<!-- http://nicelydone.club/products/treehouse/form/quiz-review-getting-familiar-with-html-and-css-2/ -->
+<!-- https://opentdb.com/api_config.php -->

@@ -1,0 +1,29 @@
+div.editable {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+strong {
+  font-weight: bold;
+}
+.txt-area{
+    width: 80%;
+}
+.main-content{
+    width: 80%;
+    margin: 0 auto;
+    margin-top:20px;
+}
+.mic-button,.mic-button:hover{
+    margin: 0;
+    padding: 0;
+    border: none !important;
+    float: right !important;
+    cursor: pointer !important;
+}
+.mic-button:focus{
+border: none;
+outline: none;
+}
